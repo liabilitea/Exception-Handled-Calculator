@@ -1,3 +1,16 @@
+# Import modules for UI
+
+# Define Calculator class to manage and customize the code easier
+
+    #Initialize UI
+    #Create labels for variables and result
+    #Create calculate button
+
+
+
+
+
+#Define calculate method 
 # Create loop to repeat calculations and input writing
 while True:
     try:
