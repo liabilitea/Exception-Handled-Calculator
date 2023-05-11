@@ -4,18 +4,41 @@ from tkinter import messagebox
 # Define Calculator class to manage and customize the code easier
 class Calculator:
     def __init__(self, ui):
-        #Initialize UI
+        # Initialize UI
         self.ui = ui
         ui.title("Calculator")
         ui.geometry("300x350")
         ui.configure(bg='#ffcccc')
-    #Create labels for variables and result
-    #Create calculate button
+    
+        # Create labels for operation and operation options 
+        self.operation_label = tk.Label(ui, text="Choose an operation:", bg='#ffcccc')
+        self.operation_label.pack(pady=10)
+
+        self.operation_var = tk.StringVar(ui)
+        self.operation_menu = tk.OptionMenu(ui, self.operation_var, "+", "-", "*", "/")
+        self.operation_menu.pack(pady=10)
+
+        # Create labels and fields for numbers 
+        # Number1
+        self.num1_label = tk.Label(ui, text="Enter first number:", bg='#ffcccc')
+        self.num1_label.pack(pady=10)
+        
+        self.num1_entry = tk.Entry(ui)
+        self.num1_entry.pack(pady=10)
+        # Number2
+        self.num2_label = tk.Label(ui, text="Enter second number:", bg='#ffcccc')
+        self.num2_label.pack(pady=10)
+        
+        self.num2_entry = tk.Entry(ui)
+        self.num2_entry.pack(pady=10)
+
+        #Create label for result
+        #Create calculate button
 
 
 
 
-
+# WAG MUNA GALAWIN T.T
 #Define calculate method 
 # Create loop to repeat calculations and input writing
 while True:
