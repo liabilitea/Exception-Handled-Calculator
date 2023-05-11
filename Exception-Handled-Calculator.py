@@ -79,12 +79,15 @@ class Calculator:
         # Ask user if they want to try again or exit using messagebox
         trial = tk.messagebox.askquestion("Try again?", "Do you want to try again?")
         # If yes, clear result label and continue
-        if trial == 'Yes':
+        if trial == 'yes':
             self.result_label.config(text="")
         else:
         # If no, destroy UI and exit
             self.ui.destroy()
 
-            
-# Create root window and Calculator instance  
+# Create root window and Calculator instance
+window = tk.Tk()
+calculator = Calculator(window) 
+
 # Start the main event loop 
+window.mainloop()
