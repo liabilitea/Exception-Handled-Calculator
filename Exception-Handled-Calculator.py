@@ -71,15 +71,16 @@ class Calculator:
         except ZeroDivisionError as error:
             self.result_label.config(text="Error: Cannot divide by zero.")
 
-    # Clear operation and number entry fields
-
+        # Clear operation and number entry fields
+        self.operation_var.set("")
+        self.num1_entry.delete(0, 'end')
+        self.num2_entry.delete(0, 'end')
 
     # Ask user if they want to try again or exit using messagebox
     trial = input("Do you want to try again? (Y/N): ")
     # If yes, clear result label and continue
     if trial.upper() == 'N':
         print("Thank you!")
-        break
     # If no, destroy UI and exit
 
 # Create root window and Calculator instance  
