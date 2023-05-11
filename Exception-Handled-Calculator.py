@@ -44,11 +44,10 @@ class Calculator:
     def calculate(self):
         try:
         
-            # Ask user to choose operatio
-            operation = input("Choose an operation (+, -, *, /): ")
-            # Ask user to input two numbers
-            num1 = float(input("Enter the first number: "))
-            num2 = float(input("Enter the second number: "))
+            # Get operation and numbers using UI
+            operation = self.operation_var.get()
+            num1 = float(self.num1_entry.get())
+            num2 = float(self.num2_entry.get())
         
             # Perform the calculation
             if operation == '+':
@@ -62,15 +61,15 @@ class Calculator:
             else:        
                 raise ValueError("Invalid operation selected.")
             
-        # Display the result in UI
-        print("Result:", result)
+            # Display the result in UI
+            self.result_label.config(text="Result: " + str(result))
     
-    # Handle exceptions and display in UI
-    except ValueError as error:
-        print("Error:", error)
+        # Handle exceptions and display in UI
+        except ValueError as error:
+            self.result_label.config(text="Error: " + str(error))
 
-    except ZeroDivisionError as error:
-        print("Error:", error)
+        except ZeroDivisionError as error:
+            self.result_label.config(text="Error: Cannot divide by zero.")
 
     # Clear operation and number entry fields
 
