@@ -76,12 +76,15 @@ class Calculator:
         self.num1_entry.delete(0, 'end')
         self.num2_entry.delete(0, 'end')
 
-    # Ask user if they want to try again or exit using messagebox
-    trial = input("Do you want to try again? (Y/N): ")
-    # If yes, clear result label and continue
-    if trial.upper() == 'N':
-        print("Thank you!")
-    # If no, destroy UI and exit
+        # Ask user if they want to try again or exit using messagebox
+        trial = tk.messagebox.askquestion("Try again?", "Do you want to try again?")
+        # If yes, clear result label and continue
+        if trial == 'Yes':
+            self.result_label.config(text="")
+        else:
+        # If no, destroy UI and exit
+            self.ui.destroy()
 
+            
 # Create root window and Calculator instance  
 # Start the main event loop 
