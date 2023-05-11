@@ -33,8 +33,12 @@ class Calculator:
         self.num2_entry.pack(pady=10)
 
         #Create label for result
-        #Create calculate button
+        self.result_label = tk.Label(ui, text="", bg='#ffcccc')
+        self.result_label.pack(pady=10)
 
+        #Create calculate button
+        self.calculate_button = tk.Button(ui, text="Calculate", command=self.calculate)
+        self.calculate_button.pack(pady=10)
 
 
 
