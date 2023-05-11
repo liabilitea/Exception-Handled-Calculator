@@ -1,8 +1,14 @@
 # Import modules for UI
-
+import tkinter as tk
+from tkinter import messagebox
 # Define Calculator class to manage and customize the code easier
-
-    #Initialize UI
+class Calculator:
+    def __init__(self, ui):
+        #Initialize UI
+        self.ui = ui
+        ui.title("Calculator")
+        ui.geometry("300x350")
+        ui.configure(bg='#ffcccc')
     #Create labels for variables and result
     #Create calculate button
 
