@@ -1,8 +1,11 @@
 # Create loop to repeat calculations and input writing
-
-# Ask user to choose operation
-# Ask user to input two numbers
-
+while True:
+    try:
+        # Ask user to choose operatio
+        operation = input("Choose an operation (+, -, *, /): ")
+        # Ask user to input two numbers
+        num1 = float(input("Enter the first number: "))
+        num2 = float(input("Enter the second number: "))
 # Perform the calculation
 
 # Display the result of the calculation after raising errors
