@@ -22,6 +22,10 @@ while True:
             raise ValueError("Invalid operation selected.")
         # Display the result of the calculation after raising errors
         print("Result:", result)
-# Handle exceptions based on the conditions met during the calculation
+    # Handle exceptions based on the conditions met during the calculation
+    except ValueError as error:
+        print("Error:", error)
 
+    except ZeroDivisionError as error:
+        print("Error:", error)
 # Ask user if they want to try again or exit the program
